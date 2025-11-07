@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ZONEX — Portfolio</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" type="image/x-icon" href="assets/zonexlogo.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/favicon.png">
+	<meta name="theme-color" content="#DAB1DA">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand"><img src="assets/transpernt.jpg" alt="ZONEX" height="50" width="50">ZONEX</a>
+			<nav class="nav">
+				<button class="nav-toggle" aria-label="Toggle menu">☰</button>
+				<ul class="nav-list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="career.html">Career</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a href="contact.html" class="btn primary nav-cta">Get Started</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section id="portfolio" class="section">
+			<div class="container">
+				<div class="section-header">
+					<h2>Portfolio</h2>
+					<div class="gallery-actions">
+						<button id="addItemBtn" class="btn">Add Item</button>
+						<button id="resetDemoBtn" class="btn light">Reset Demo Data</button>
+					</div>
+				</div>
+				<div id="galleryGrid" class="grid gallery-grid"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>© <span id="year"></span> ZONEX. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Modal for Portfolio Add -->
+	<div id="itemModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+		<div class="modal-backdrop" data-close></div>
+		<div class="modal-content" role="document">
+			<header class="modal-header">
+				<h3 id="modalTitle">Add Item</h3>
+				<button class="icon-btn" aria-label="Close" data-close>✕</button>
+			</header>
+			<form id="itemForm" class="form modal-body">
+				<input type="hidden" id="itemId" />
+				<div class="form-row">
+					<label for="itemTitle">Title</label>
+					<input type="text" id="itemTitle" required />
+				</div>
+				<div class="form-row">
+					<label for="itemImage">Image URL</label>
+					<input type="url" id="itemImage" placeholder="https://..." required />
+				</div>
+				<div class="form-row">
+					<label for="itemDesc">Description</label>
+					<textarea id="itemDesc" rows="4" required></textarea>
+				</div>
+				<footer class="modal-footer">
+					<button type="button" class="btn light" data-close>Cancel</button>
+					<button type="submit" class="btn primary">Save</button>
+				</footer>
+			</form>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ZONEX — Career</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" type="image/x-icon" href="assets/zonexlogo.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
+	<link rel="apple-touch-icon" href="assets/favicon.png">
+	<meta name="theme-color" content="#DAB1DA">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="index.html" class="brand"><img src="assets/transpernt.jpg" alt="ZONEX" height="50" width="50">ZONEX</a>
+			<nav class="nav">
+				<button class="nav-toggle" aria-label="Toggle menu">☰</button>
+				<ul class="nav-list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="career.html">Career</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a href="contact.html" class="btn primary nav-cta">Get Started</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section id="career" class="section alt">
+			<div class="container">
+				<h2>Career</h2>
+				<div class="career-content">
+					<p>We're always looking for talented people who love building great products. Fill out the form below to apply.</p>
+					<div class="career-contact">
+						<p><strong>Email:</strong> <a href="mailto:zonex3934@gmail.com">zonex3934@gmail.com</a></p>
+						<p><strong>Phone:</strong> <a href="tel:+919342326739">+91-9342326739</a>, <a href="tel:+919843602334">+91-9843602334</a></p>
+					</div>
+					<form id="careerForm" class="form">
+						<div class="form-row">
+							<label for="careerName">Your Name</label>
+							<input type="text" id="careerName" name="name" required />
+						</div>
+						<div class="form-row">
+							<label for="careerEmail">Your Email</label>
+							<input type="email" id="careerEmail" name="email" required />
+						</div>
+						<div class="form-row">
+							<label for="careerPhone">Phone Number</label>
+							<input type="tel" id="careerPhone" name="phone" required />
+						</div>
+						<div class="form-row">
+							<label for="applyFor">Apply For</label>
+							<input type="text" id="applyFor" name="applyFor" placeholder="e.g., Frontend Developer, Backend Developer, Full Stack Developer" required />
+						</div>
+						<button type="submit" class="btn primary">Submit</button>
+						<p id="careerStatus" class="status" role="status" aria-live="polite"></p>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>© <span id="year"></span> ZONEX. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="app.js"></script>
+</body>
+</html>
+
